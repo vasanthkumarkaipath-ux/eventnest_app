@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventNest</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🪺 EventNest</h2>
+
+    <a href="/" class="menu active">🏠 Home</a>
+    <a href="/dashboard" class="menu">📊 Dashboard</a>
+    <a href="/admin_dashboard" class="menu">👑 Admin</a>
+    <a href="/qr" class="menu">📱 QR</a>
+    <a href="/logout" class="menu logout">🚪 Logout</a>
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h3>👋 Welcome {{ session['user'] if 'user' in session else 'Guest' }}</h3>
+    </div>
+
+    {% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>

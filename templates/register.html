@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="glass">
+    <h2>Register for Event</h2>
+
+    <form method="POST">
+        <p>You will be registered as: <strong>{{ session['user'] }}</strong></p>
+        <button class="neon-btn">Confirm Registration</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background: #020617;
+    padding: 25px;
+    border-right: 1px solid #1e293b;
+}
+
+.sidebar h2 {
+    color: #22d3ee;
+    margin-bottom: 30px;
+}
+
+/* Menu */
+.menu {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu:hover {
+    background: #1e293b;
+    color: #22d3ee;
+    transform: translateX(5px);
+}
+
+/* Active */
+.active {
+    background: #1e293b;
+    color: #22d3ee;
+}
+
+/* Logout */
+.logout {
+    margin-top: 30px;
+    color: #f87171;
+}
+
+/* ===== MAIN ===== */
+.main {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1e293b;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #1e293b;
+    flex: 1;
+    min-width: 200px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 15px #22d3ee,
+        0 0 25px #6366f1;
+}
+
+/* ===== BUTTON ===== */
+button {
+    background: linear-gradient(45deg, #6366f1, #22d3ee);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== INPUT ===== */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #1e293b;
+    color: white;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+/* ===== ANIMATION ===== */
+.card {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(10px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+}

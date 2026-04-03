@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>📊 Dashboard</h2>
+
+<div class="card">
+<h3>Register Your Name</h3>
+<form method="POST" action="/register">
+<input name="name" placeholder="Enter your name">
+<button>Register</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Participants</h3>
+{% for p in participants %}
+<p>{{ p[1] }}</p>
+{% endfor %}
+</div>
+
+<div class="grid">
+{% for t in teams %}
+<div class="card">
+<h3>{{ t[1] }}</h3>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

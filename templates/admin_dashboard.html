@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Admin Dashboard</h2>
+
+<h3>Participants</h3>
+{% for p in participants %}
+<p>{{ p[1] }} 
+<a href="/delete_participant/{{p[0]}}">Delete</a>
+</p>
+{% endfor %}
+
+<h3>Teams</h3>
+{% for t in teams %}
+<p>{{ t[1] }}
+<a href="/edit_team/{{t[0]}}">Edit</a>
+<a href="/delete_team/{{t[0]}}">Delete</a>
+</p>
+{% endfor %}
+
+<form method="POST" action="/add_team">
+<input name="team">
+<button>Add Team</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="glass">
+    <h2>Add Event</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Event Name" required>
+        <input type="date" name="date" required>
+        <input type="text" name="venue" placeholder="Venue" required>
+        <button class="neon-btn">Add Event</button>
+    </form>
+</div>
+{% endblock %}
